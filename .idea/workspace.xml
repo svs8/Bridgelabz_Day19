@@ -88,8 +88,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/com/bridgelabz/Validation.java</url>
-          <line>81</line>
-          <properties class="com.bridgelabz.Validation" method="main">
+          <line>97</line>
+          <properties class="com.bridgelabz.Validation">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
