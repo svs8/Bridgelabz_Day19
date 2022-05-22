@@ -16,8 +16,10 @@ public class Validation {
         Matcher matcher = pattern.matcher(firstName);
         boolean result = matcher.matches();
 
-        if(result == true)
-            System.out.println("First Name is Valid");
+        if(result == true){
+            userLastName();
+        }
+
         else
             System.out.println("First Name is Invalid");
     }
@@ -29,14 +31,31 @@ public class Validation {
         System.out.println("Enter Last Name:");
         String lastName = scanner.next();
 
-        Pattern pattern = Pattern.compile(lastNamePattern);
-        Matcher matcher = pattern.matcher(lastName);
-        boolean result = matcher.matches();
+        Pattern pattern1 = Pattern.compile(lastNamePattern);
+        Matcher matcher1 = pattern1.matcher(lastName);
+        boolean result1 = matcher1.matches();
 
-        if(result == true)
-            System.out.println("Last Name is Valid");
+        if(result1 == true)
+            userEmail();
         else
             System.out.println("Last Name is Invalid");
+    }
+    public static void userEmail(){
+        String emailPattern= "[a-zA-Z0-9.+-]+[0-9a-zA-Z]*@[a-z0-9]+[.][a-z]{2,4}[.a-z]*";
+        System.out.println("Enter your Email:");
+        Scanner scanner = new Scanner(System.in);
+        String email = scanner.next();
+
+        Pattern pattern2=Pattern.compile(emailPattern);
+        Matcher matcher2=pattern2.matcher(email);
+        boolean result2=matcher2.matches();
+
+        if(result2== true){
+            System.out.println("Email is valid");
+        }else{
+            System.out.println("Email is not valid");
+        }
+
     }
 
 
@@ -45,7 +64,6 @@ public class Validation {
     public static void main(String[] args) {
         System.out.println("Welcome to User Registration program");
         userFirstName();
-        userLastName();
 
     }
 }
